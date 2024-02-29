@@ -1,6 +1,6 @@
 # New Frontier: Frontend Developer Test
 
-Welcome to the recruitment challenge for the Frontend Developer position at New Frontier. This test is designed to assess your technical prowess, creativity, and ability to solve problems in the context of a dynamic, blockchain-based marketplace for generative art NFTs.
+Welcome to the challenge for the Frontend Developer position at New Frontier. This test is designed to assess your technical prowess, creativity, and ability to solve problems in the context of a dynamic, blockchain-based marketplace for generative art NFTs.
 
 ## About the Test
 
