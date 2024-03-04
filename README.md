@@ -31,7 +31,7 @@ Your task is to build a dynamic, user-friendly interface for New Frontier. The a
 
 - **Framework Usage**: Preference for NextJS 14 with Tailwind.
 - **Dependency Management**: Efficient use of npm, webpack, or equivalent tools.
-- **Semantic HTML**: Markup should be semantic and HTML5 compliant.
+- **Semantic HTML**: Markup should bne semantic and HTML5 compliant.
 
 ### Bonus Points For
 
