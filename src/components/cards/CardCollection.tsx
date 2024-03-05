@@ -27,8 +27,8 @@ export default function CardCollection() {
         <p className="text-xs text-gray-400 font-mono">Published on January 1, 2024 at 13:54</p>
         <p className="text-sm text-gray-400 font-mono mt-4">Rongoā is a gentle visual balance with simplicity that evokes peace and tranquility. The colors and shapes, although simple, work together to create an overall impression of calm and serenity.</p>
       </div>
-      <button className="w-full bg-violet-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded mt-4">
-        mint
+      <button className="w-full font-mono  bg-violet-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded mt-4">
+        {"<mint>"}
       </button>
     </div>
   </div>

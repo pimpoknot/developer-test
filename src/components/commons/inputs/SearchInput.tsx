@@ -24,7 +24,7 @@ export function SearchInput() {
   const [value, setValue] = useState("");
   const [filteredData, setFilteredData] = useState(data)
 
-
+//TODO: Implementar a função de filtrar os dados para o SearchInput
  const filterSearch = (event: any) => {
   const value = event.target.value.toLowerCase();
   const filteredData = data.filter((user: any) => {
