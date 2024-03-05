@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState } from "react";
-import { ActionIcon, Container, Image, Input } from "@mantine/core";
+import React, { useMemo, useState } from "react";
+import { ActionIcon, Image, Input } from "@mantine/core";
 
 
 const data = [
@@ -25,14 +25,20 @@ export function SearchInput() {
   const [filteredData, setFilteredData] = useState(data)
 
 
- const filterSearch = (event: any) => {
+
+
+
+  // TODO: filter search function
+ const filterSearch = useMemo(() => (event: any) => {
   const value = event.target.value.toLowerCase();
   const filteredData = data.filter((user: any) => {
     return user.name.toLowerCase().includes(value);
   });
 
+}, [data]);
+
+
   setFilteredData(filteredData);
-}
 
   const SearchButton = () => (
     <ActionIcon
@@ -57,7 +63,7 @@ export function SearchInput() {
       <div className="container mx-auto max-w-5xl mt-8">
         <Input
           value={value}
-          onChange={(event) => {
+          onChange={(event: any) => {
             setValue(event.currentTarget.value);
             filterSearch(event);
           }}
