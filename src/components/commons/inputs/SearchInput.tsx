@@ -1,44 +1,39 @@
 'use client'
 
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { ActionIcon, Image, Input } from "@mantine/core";
 
 
-const data = [
-  {
-    id: 1,
-    name: "John Doe",
-    email: "teste@gmail.com",
-  },
-  {
-    id: 2,
-    name: "Jane Doe",
-    email: "teste2@gmail.com",
-  }
-];
+
 
 export function SearchInput() {
 
- 
+  const data = [
+    {
+      id: 1,
+      name: "John Doe",
+      email: "teste@gmail.com",
+    },
+    {
+      id: 2,
+      name: "Jane Doe",
+      email: "teste2@gmail.com",
+    }
+  ];
 
   const [value, setValue] = useState("");
   const [filteredData, setFilteredData] = useState(data)
 
 
-
-
-
-  // TODO: filter search function
- const filterSearch = useMemo(() => (event: any) => {
+ const filterSearch = (event: any) => {
   const value = event.target.value.toLowerCase();
   const filteredData = data.filter((user: any) => {
     return user.name.toLowerCase().includes(value);
   });
 
-}, [data]);
-
 
   setFilteredData(filteredData);
+}
 
   const SearchButton = () => (
     <ActionIcon
