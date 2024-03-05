@@ -1,8 +1,6 @@
 import CollectionContainer from "@/components/home/CollectionContainer";
 import Hero from "@/components/home/Hero";
 import SearchBar from "@/components/home/SearchBar";
-import HeaderContainer from "@/components/home/header/HeaderContainer";
-import { MantineProvider } from "@mantine/core";
 
 export default function Home() {
   return (

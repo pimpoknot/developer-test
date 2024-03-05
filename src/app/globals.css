@@ -6,10 +6,13 @@
 
 /* font family variables */
 
+
+
 :root {
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Montserrat', sans-serif;
   --font-mono: 'Source Code Pro', monospace;
+  
 }
 
 @layer base {
@@ -108,7 +111,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  background-color: rgba(45, 45, 45, 1);
+  /* background-color: rgba(45, 45, 45, 1); */
   /* background: linear-gradient(rgba(45, 45, 45, 1), rgba(45, 45, 45, 1)), 
   url('/background.png');  */
   background-repeat: no-repeat;
