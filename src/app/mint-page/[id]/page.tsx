@@ -1,6 +1,7 @@
 "use client";
 import { SubmitButton } from "@/components/commons/buttons/SubmitButton";
-import { useEffect, useState } from "react";
+import { Progress } from "@/components/ui/progress";
+import { useEffect, useMemo, useState } from "react";
 
 function TraitComponent({
   title,
@@ -22,6 +23,17 @@ function TraitComponent({
 
 export default function ItemDetail() {
   const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(13);
+  const [isMinting, setIsMinting] = useState(false);
+
+  const fakeMint = useMemo(() => {
+    setIsMinting(true);
+    const timer = setInterval(() => {
+      setProgress((prev) => prev + 1);
+    }, 1000);
+    return () => clearInterval(timer);
+  }
+  , []);
 
   //fake data fetching loading
   useEffect(() => {
@@ -52,12 +64,16 @@ export default function ItemDetail() {
             and tranquility. The colors and shapes, although simple, work
             together to create an overall impression of calm and serenity.
           </p>
+
+          
+
           <SubmitButton
             isLoading={isLoading}
-            className="font-mono tracking-wider font-normal"
+            onClick={() => fakeMint}
           >
             {"<buy>"}
-          </SubmitButton>{" "}
+          </SubmitButton>
+          {isMinting && <Progress value={progress} className="w-[100%] mt-3 bg-green-500" />}
           <div className="flex items-center mt-4">
             <span className="text-gray-400 mr-2">createdBy</span>
             <span className="text-violet-700">@authorNick</span>
