@@ -45,7 +45,7 @@ export default function ItemDetail() {
 
   return (
     <div className="bg-black text-white p-8">
-      <div className="max-w-6xl mx-auto flex justify-between items-start">
+      <div className="max-w-6xl mx-auto flex justify-between items-start flex-col lg:flex-row">
         <div>
           <div className="text-gray-400 uppercase text-sm">traits</div>
           <div className="grid grid-cols-3 gap-4 mt-4">
@@ -54,7 +54,7 @@ export default function ItemDetail() {
             <TraitComponent title="Background" value="Red" percent="10%" />
           </div>
         </div>
-        <div className="max-w-xl">
+        <div className="max-w-xl mt-3 lg:mt-0">
           <h1 className="text-xl font-bold font-mono tracking-wider">#0000</h1>
           <h2 className="text-gray-400 font-light mt-2 font-mono tracking-wider">
             collection name

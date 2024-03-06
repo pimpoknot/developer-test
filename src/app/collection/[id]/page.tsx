@@ -10,7 +10,7 @@ export default function CollectionPage() {
   
   return (
     <div className="container mt-8">
-      <div className="flex justify-center">
+      <div className="flex justify-center flex-col md:flex-row">
         <div>
           <CardCollection id={params?.id as string}/>
         </div>
