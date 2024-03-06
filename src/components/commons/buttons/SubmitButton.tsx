@@ -15,7 +15,7 @@ export function SubmitButton({
 }) {
 
   return (
-    <Button  className="w-full font-mono  bg-violet-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded mt-4">
+    <Button  className=" w-full font-mono  bg-violet-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded mt-4">
       {isLoading ? (
         <>
           <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
