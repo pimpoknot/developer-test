@@ -1,6 +1,16 @@
 import { Image } from "@mantine/core";
 
-export default function CardArt({ art }: any) {
+
+interface CardArtProps {
+  art: {
+    id: number;
+    imageSrc: string;
+    artistName: string;
+    price: string;
+  };
+}
+
+export default function CardArt({ art }: CardArtProps) {
   return (
     <div className="flex rounded-lg py-1 px-3 gap-5">
       <div className="flex items-center justify-center  text-white font-mono font-bold text-xl rounded-full">

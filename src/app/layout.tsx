@@ -3,12 +3,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import HeaderContainer from "@/components/header/HeaderContainer";
 import { MantineProvider } from "@mantine/core";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "new frontier  art",
-  description: "The forever home of long-form generative art. Create, collect, and connect today. Pioneering the digital art revolution, one hash and group chat at a time.",
+  description:
+    "The forever home of long-form generative art. Create, collect, and connect today. Pioneering the digital art revolution, one hash and group chat at a time.",
 };
 
 export default function RootLayout({
@@ -22,6 +24,7 @@ export default function RootLayout({
         <MantineProvider>
           <HeaderContainer />
           {children}
+          <Footer />
         </MantineProvider>
       </body>
     </html>
